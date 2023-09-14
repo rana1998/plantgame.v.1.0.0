@@ -25,6 +25,11 @@ mongoose
 const authRoutes = require('./src/routes/authRoutes');
 app.use('/api/auth', authRoutes);
 
+app.get("/", (req, res) => {
+  res.send("Express on Vercel");
+});
+
+
 // Start the server
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
