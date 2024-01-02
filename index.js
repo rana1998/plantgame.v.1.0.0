@@ -23,7 +23,21 @@ mongoose
 
 // Routes
 const authRoutes = require('./src/routes/authRoutes');
+const userRoutes = require('./src/routes/userRoutes');
+const dailyMissionRoutes = require('./src/routes/dailyMissionRoutes');
+const leaderboardRoutes = require('./src/routes/leaderboardRoutes');
+const eventRoutes = require('./src/routes/eventRoutes');
+
+
+
 app.use('/api/auth', authRoutes);
+app.use('/api/user', userRoutes);
+app.use('/api/misson', dailyMissionRoutes);
+app.use('/api/leaderboard', leaderboardRoutes);
+app.use('/api/events', eventRoutes);
+
+
+
 
 app.get("/", (req, res) => {
   res.send("Express on Vercel");
